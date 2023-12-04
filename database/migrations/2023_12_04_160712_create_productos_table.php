@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('Cantidad_stock')->unsigned()->nullable()->default(1);
             $table->date('fecha_vencimiento');
             $table->boolean('estado')->default(true);
-            
+            $table->string('Categoria');
         });
     }
    
