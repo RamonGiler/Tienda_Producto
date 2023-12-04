@@ -52,13 +52,12 @@
                  <th>precio_venta</th>
                 <th>Cantidad_stock</th>
                 <th>fecha_vencimiento</th>
-                <th>Categoria</th>
                 <th>Acciones</th>
                
             </tr>
         </thead>
         <tbody>
-           @foreach($productos as $item)
+           @foreach($producto as $item)
         <tr>
                 <td>{{$item->id}}</td>
                <td>{{$item->nombre}}</td>
