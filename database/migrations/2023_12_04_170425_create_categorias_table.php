@@ -11,19 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('productos', function (Blueprint $table) {
+        Schema::create('categorias', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->date('fecha_vencimiento');
-            $table->decimal('precio', 8, 2);
-            $table->integer('cantidad');
-            $table->unsignedBigInteger('categoria_id');
             $table->timestamps();
-    
-            $table->foreign('categoria_id')->references('id')->on('categorias');
         });
     }
-   // database/migrations/xxxx_xx_xx_create_productos_table.php
+// database/migrations/xxxx_xx_xx_create_categorias_table.php
 
 
     /**
@@ -31,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('productos');
+        Schema::dropIfExists('categorias');
     }
 };
