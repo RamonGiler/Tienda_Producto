@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('productos', function (Blueprint $table) {
+            $producto = new Producto();
             $table->id();
             $table->string('nombre');
             $table->date('fecha_vencimiento');
@@ -23,7 +24,7 @@ return new class extends Migration
             $table->foreign('categoria_id')->references('id')->on('categorias');
         });
     }
-   // database/migrations/xxxx_xx_xx_create_productos_table.php
+   
 
 
     /**
