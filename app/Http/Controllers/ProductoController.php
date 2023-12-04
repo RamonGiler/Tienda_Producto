@@ -17,5 +17,9 @@ class ProductoController extends Controller
         return back();
 
     } 
+    public function index(){
+        $producto = Producto::Where('estado',true)->get();
+        return view('producto');
+    }
 }
 
